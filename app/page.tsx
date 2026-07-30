@@ -2,14 +2,16 @@ import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/sections/Hero";
-import About from "@/sections/About";
 import Projects from "@/sections/Projects";
+import About from "@/sections/About";
 import Services from "@/sections/Services";
-import Technology from "@/sections/Technology";
 import Process from "@/sections/Process";
-import WhyWorkWithMe from "@/sections/WhyWorkWithMe";
-import CTA from "@/sections/CTA";
 import Contact from "@/sections/Contact";
+
+// Technology, WhyWorkWithMe, and the standalone CTA banner sections still
+// exist in /sections if you want them back — they're just not part of the
+// simplified homepage structure requested (Hero → Selected Work → About →
+// What I Do → Process → Let's Connect → Footer).
 
 export default function Home() {
   return (
@@ -18,13 +20,10 @@ export default function Home() {
       <Navbar />
       <main className="relative z-10">
         <Hero />
-        <About />
         <Projects />
+        <About />
         <Services />
-        <Technology />
         <Process />
-        <WhyWorkWithMe />
-        <CTA />
         <Contact />
       </main>
       <Footer />

@@ -3,7 +3,7 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import RevealText from "@/components/RevealText";
-import { social } from "@/lib/data";
+import { social, workingTogether } from "@/lib/data";
 import MagneticButton from "@/components/MagneticButton";
 
 type Status = "idle" | "sending" | "sent" | "error";
@@ -27,7 +27,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative px-6 py-32 md:py-40 border-t border-line">
+    <section id="connect" className="relative px-6 py-32 md:py-40 border-t border-line">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-5">
@@ -38,11 +38,11 @@ export default function Contact() {
               transition={{ duration: 0.7 }}
               className="section-eyebrow"
             >
-              Contact
+              Let&rsquo;s Connect
             </motion.p>
-            <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper">
-                Let&rsquo;s build something <span className="text-subtle">premium.</span>
-              </RevealText>
+            <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper leading-[0.95]">
+              Let&rsquo;s Build Something <span className="text-subtle">Exceptional.</span>
+            </RevealText>
 
             <div className="mt-10 space-y-6">
               <div>
@@ -59,6 +59,19 @@ export default function Contact() {
                 <a href={social.github} target="_blank" rel="noreferrer" data-cursor-hover className="font-body text-sm text-muted hover:text-paper transition-colors">GitHub</a>
                 <a href={social.instagram} target="_blank" rel="noreferrer" data-cursor-hover className="font-body text-sm text-muted hover:text-paper transition-colors">Instagram</a>
                 <a href={social.x} target="_blank" rel="noreferrer" data-cursor-hover className="font-body text-sm text-muted hover:text-paper transition-colors">X</a>
+              </div>
+            </div>
+
+            {/* Working Together — light-touch Q&A, not a full FAQ block */}
+            <div className="mt-14 border-t border-line pt-8">
+              <p className="font-body font-medium text-xs tracking-widest2 text-muted uppercase">Working Together</p>
+              <div className="mt-5 space-y-5">
+                {workingTogether.map((item) => (
+                  <div key={item.q}>
+                    <p className="font-display font-semibold text-base text-paper">{item.q}</p>
+                    <p className="mt-1 font-body text-sm text-muted leading-relaxed">{item.a}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div>
-            <p className="font-display text-2xl font-bold tracking-tight text-paper">THE THAJUU</p>
+            <p className="font-display text-2xl font-bold tracking-tight text-paper">THE THAJU</p>
             <p className="mt-2 font-body text-sm text-muted">AI Web Developer &mdash; Dubai, UAE</p>
           </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col-reverse md:flex-row items-center justify-between gap-4 border-t border-line pt-6">
           <p className="font-body text-xs text-muted">
-            &copy; {year} The Thajuu. All rights reserved.
+            &copy; {year} The Thaju. All rights reserved.
           </p>
           <p className="font-body text-xs text-muted">Designed &amp; built in Dubai.</p>
         </div>

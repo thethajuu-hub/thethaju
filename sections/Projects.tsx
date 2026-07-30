@@ -11,7 +11,7 @@ export default function Projects() {
   const [active, setActive] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="relative px-6 py-32 md:py-40">
+    <section id="work" className="relative px-6 py-32 md:py-40">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

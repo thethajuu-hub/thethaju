@@ -72,14 +72,12 @@ export interface Service {
 }
 
 export const services: Service[] = [
+  { title: "Digital Experience Design", description: "Interfaces designed around how people actually read, feel, and decide." },
   { title: "Premium Website Development", description: "Full builds engineered around typography, spacing, and motion — not templates." },
-  { title: "AI Website Development", description: "AI-assisted workflows that speed up build time without cutting quality." },
+  { title: "AI-Powered Web Experiences", description: "AI-assisted workflows that speed up build time without cutting quality." },
   { title: "Landing Pages", description: "Single-purpose pages engineered around one conversion goal." },
   { title: "Business Websites", description: "Corporate sites built to signal credibility from the first scroll." },
-  { title: "E-commerce Websites", description: "Storefronts where the product stays the hero, not the UI." },
-  { title: "Website Redesign", description: "Rebuilding an existing site's foundation without losing its identity." },
-  { title: "UI/UX Design", description: "Interfaces designed around how people actually read and decide." },
-  { title: "Performance Optimization", description: "Faster loads, cleaner code, better Core Web Vitals — measured, not assumed." },
+  { title: "Interactive Web Experiences", description: "Motion and 3D used with restraint — to support the story, not distract from it." },
 ];
 
 export interface TechCategory {
@@ -103,11 +101,9 @@ export interface ProcessStep {
 export const processSteps: ProcessStep[] = [
   { index: "01", title: "Discovery", description: "Understanding the business, the audience, and what the site actually needs to do." },
   { index: "02", title: "Strategy", description: "Defining sitemap, content structure, and technical approach before design starts." },
-  { index: "03", title: "UI Design", description: "Establishing type, color, and layout systems specific to the brand." },
+  { index: "03", title: "Design", description: "Establishing type, color, and layout systems specific to the brand." },
   { index: "04", title: "Development", description: "Building component-first in Next.js and TypeScript for a maintainable codebase." },
-  { index: "05", title: "Animation", description: "Layering motion that supports the content instead of competing with it." },
-  { index: "06", title: "Testing", description: "Checking across devices, browsers, and accessibility requirements." },
-  { index: "07", title: "Deployment", description: "Shipping to Vercel with a clean, versioned GitHub history." },
+  { index: "05", title: "Launch", description: "Shipping to Vercel with a clean, versioned GitHub history, and staying on for support." },
 ];
 
 export interface Stat {
@@ -133,15 +129,31 @@ export const social = {
 };
 
 export const brand = {
+  role: "Digital Experience Designer & Developer",
   availability: "Available For Freelance Projects",
-  statement: "Creating digital experiences through AI, design, and modern web technology.",
+  statement: "Crafting premium digital experiences through design, motion and modern web technologies.",
 };
+
+export const workingTogether = [
+  {
+    q: "How long does a typical project take?",
+    a: "[Add your real answer — e.g. typical timeline for a landing page vs. a full build]",
+  },
+  {
+    q: "Do I own the code and design after launch?",
+    a: "[Add your real answer — your actual ownership/licensing terms]",
+  },
+  {
+    q: "What happens after launch?",
+    a: "[Add your real answer — what support or updates you offer post-launch]",
+  },
+];
 
 export const navLinks = [
   { label: "Home", href: "#home" },
+  { label: "Selected Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Services", href: "#services" },
+  { label: "What I Do", href: "#what-i-do" },
   { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "Let's Connect", href: "#connect" },
 ];

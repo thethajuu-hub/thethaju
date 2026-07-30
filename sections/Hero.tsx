@@ -44,7 +44,16 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="section-eyebrow mb-6"
           >
-            AI Web Developer &middot; Dubai, UAE
+            Based in Dubai, UAE
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="mb-6 font-body text-lg md:text-xl font-medium text-muted"
+          >
+            {brand.role}
           </motion.p>
 
           <h1 className="font-display font-black tracking-tight leading-[0.92] text-paper">
@@ -55,7 +64,7 @@ export default function Hero() {
             </span>
             <span className="block overflow-hidden text-[clamp(2.5rem,11vw,3.5rem)] md:text-[clamp(3.5rem,7vw,4.5rem)] lg:text-[clamp(4.5rem,6vw,6rem)]">
               <motion.span custom={1} variants={reveal} initial="hidden" animate="show" className="block text-subtle">
-                Thajuu
+                Thaju
               </motion.span>
             </span>
           </h1>
@@ -85,11 +94,11 @@ export default function Hero() {
             transition={{ delay: 1.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mt-12 flex flex-wrap items-center gap-5"
           >
-            <MagneticButton href="#projects" variant="solid">
-              View Projects
+            <MagneticButton href="#work" variant="solid">
+              View Work
             </MagneticButton>
-            <MagneticButton href="#contact" variant="outline">
-              Contact Me
+            <MagneticButton href="#connect" variant="outline">
+              Let&rsquo;s Connect
             </MagneticButton>
           </motion.div>
         </div>

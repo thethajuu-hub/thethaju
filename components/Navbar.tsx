@@ -32,7 +32,7 @@ export default function Navbar() {
           )}
         >
           <a href="#home" className="font-display text-lg font-bold tracking-tight text-paper" data-cursor-hover>
-            THE THAJUU
+            THE THAJU
           </a>
 
           <nav className="hidden md:flex items-center gap-9">
@@ -78,7 +78,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[70] bg-black flex flex-col justify-between p-8"
           >
             <div className="flex justify-between items-center">
-              <span className="font-display text-lg font-bold tracking-tight text-paper">THE THAJUU</span>
+              <span className="font-display text-lg font-bold tracking-tight text-paper">THE THAJU</span>
               <button onClick={() => setOpen(false)} aria-label="Close menu" data-cursor-hover className="text-paper text-3xl leading-none">
                 &times;
               </button>

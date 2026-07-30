@@ -6,7 +6,7 @@ import { services } from "@/lib/data";
 
 export default function Services() {
   return (
-    <section id="services" className="relative px-6 py-32 md:py-40">
+    <section id="what-i-do" className="relative px-6 py-32 md:py-40">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -15,10 +15,10 @@ export default function Services() {
           transition={{ duration: 0.7 }}
           className="section-eyebrow"
         >
-          Services
+          What I Do
         </motion.p>
         <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl lg:text-7xl text-paper max-w-xl">
-          Where I can help.
+          How I can help.
         </RevealText>
 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line">

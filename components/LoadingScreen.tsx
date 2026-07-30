@@ -49,12 +49,12 @@ export default function LoadingScreen() {
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
               className="font-display text-4xl md:text-6xl tracking-[0.15em] text-paper"
             >
-              THE THAJUU
+              THE THAJU
             </motion.p>
           </div>
 
           <div className="mt-10 flex items-center gap-4 font-body text-xs tracking-widest2 text-muted">
-            <span>AI WEB DEVELOPER</span>
+            <span>DIGITAL EXPERIENCE DESIGNER</span>
             <span className="h-px w-8 bg-line" />
             <span className="text-paper tabular-nums">{progress}%</span>
           </div>

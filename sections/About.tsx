@@ -56,8 +56,8 @@ export default function About() {
 
           <div className="md:col-span-8 space-y-6">
             {[
-              "I'm an AI Web Developer working out of Dubai, building websites that pair modern engineering with a genuinely premium feel — the kind of site a brand can point to and say, this is us.",
-              "My workflow leans on AI as a collaborator, not a shortcut: it speeds up the repetitive parts of development so more time goes into the design decisions, motion detail, and performance work that actually shape how a site feels.",
+              "I'm a Digital Experience Designer & Developer working out of Dubai, crafting digital experiences that pair modern engineering with a genuinely premium feel — the kind of site a brand can point to and say, this is us.",
+              "My workflow blends design and development from the start, with AI as a collaborator rather than a shortcut: it speeds up the repetitive parts so more time goes into the design decisions, motion detail, and performance work that actually shape how something feels.",
               "Every project follows the same philosophy — restraint over noise, typography and spacing over decoration, and motion that supports the content instead of competing with it.",
             ].map((p, i) => (
               <motion.p

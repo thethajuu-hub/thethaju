@@ -28,24 +28,25 @@ const body = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thethajuu.vercel.app"),
-  title: "THE THAJUU — Muhammed Thajudheen, AI Web Developer",
+  title: "THE THAJU — Muhammed Thajudheen, Digital Experience Designer & Developer",
   description:
-    "AI Web Developer based in Dubai, UAE. Building premium, AI-powered websites with modern web technology — from concept to cinematic, production-grade launch.",
+    "Digital Experience Designer & Developer based in Dubai, UAE. Crafting premium digital experiences through design, motion, and modern web technologies.",
   keywords: [
-    "AI Web Developer",
+    "Digital Experience Designer",
+    "Web Developer",
     "Muhammed Thajudheen",
-    "THE THAJUU",
+    "THE THAJU",
     "Dubai web developer",
     "Next.js developer",
     "premium website design",
   ],
   authors: [{ name: "Muhammed Thajudheen" }],
   openGraph: {
-    title: "THE THAJUU — AI Web Developer",
+    title: "THE THAJU — Digital Experience Designer & Developer",
     description:
-      "Building premium AI-powered websites with modern web technologies.",
+      "Crafting premium digital experiences through design, motion, and modern web technologies.",
     url: "https://thethajuu.vercel.app",
-    siteName: "THE THAJUU",
+    siteName: "THE THAJU",
     type: "website",
   },
   twitter: {

@@ -48,6 +48,7 @@ export default function ProjectCard({
         onMouseMove={handleTilt}
         onMouseLeave={resetTilt}
         data-cursor-hover
+        data-cursor-text="View Project"
         style={{ rotateX, rotateY, transformPerspective: 1000 }}
         whileHover={{ boxShadow: "0 30px 80px -20px rgba(255,255,255,0.12)" }}
         className="group relative w-full [direction:ltr] rounded-2xl border border-line bg-card p-3 text-left overflow-hidden"

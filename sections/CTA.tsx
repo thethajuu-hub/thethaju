@@ -33,7 +33,7 @@ export default function CTA() {
           transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
           className="mt-12 flex justify-center"
         >
-          <MagneticButton href="#contact" variant="solid">
+          <MagneticButton href="#connect" variant="solid">
             Start a Project
           </MagneticButton>
         </motion.div>
