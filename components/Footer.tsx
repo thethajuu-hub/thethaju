@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div>
-            <p className="font-display text-2xl font-medium tracking-tight text-paper">THE THAJUU</p>
+            <p className="font-display text-2xl font-bold tracking-tight text-paper">THE THAJUU</p>
             <p className="mt-2 font-body text-sm text-muted">AI Web Developer &mdash; Dubai, UAE</p>
           </div>
 
@@ -29,7 +29,7 @@ export default function Footer() {
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             data-cursor-hover
-            className="self-start md:self-auto rounded-full border border-line px-5 py-2.5 font-body text-xs tracking-widest2 text-muted hover:text-paper hover:border-white/40 transition-colors"
+            className="self-start md:self-auto rounded-full border border-line px-5 py-2.5 font-body text-xs font-semibold tracking-widest2 text-muted hover:text-paper hover:border-white/40 transition-colors"
           >
             BACK TO TOP
           </button>

@@ -25,7 +25,7 @@ export default function Process() {
         >
           Process
         </motion.p>
-        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper">
+        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl lg:text-7xl text-paper">
           From brief to launch.
         </RevealText>
 
@@ -49,8 +49,8 @@ export default function Process() {
                   {step.index}
                 </div>
                 <div className="pt-2 md:pt-4">
-                  <h3 className="font-display text-2xl text-paper">{step.title}</h3>
-                  <p className="mt-2 font-body text-sm text-muted max-w-md">{step.description}</p>
+                  <h3 className="font-display font-semibold text-2xl text-paper">{step.title}</h3>
+                  <p className="mt-2 font-body text-sm text-muted leading-relaxed max-w-md">{step.description}</p>
                 </div>
               </motion.div>
             ))}

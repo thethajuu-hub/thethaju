@@ -17,7 +17,7 @@ export default function Services() {
         >
           Services
         </motion.p>
-        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper max-w-xl">
+        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl lg:text-7xl text-paper max-w-xl">
           Where I can help.
         </RevealText>
 
@@ -32,7 +32,7 @@ export default function Services() {
               className="group relative bg-card p-8 md:p-10 transition-colors duration-500 hover:bg-[#0d0d0d]"
             >
               <span className="font-display text-xs text-subtle">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-4 font-display text-xl md:text-2xl text-paper">{s.title}</h3>
+              <h3 className="mt-4 font-display font-semibold text-xl md:text-2xl text-paper">{s.title}</h3>
               <p className="mt-3 font-body text-sm text-muted leading-relaxed">{s.description}</p>
               <span className="absolute bottom-8 right-8 font-body text-subtle opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:-translate-y-1">
                 &rarr;

@@ -20,7 +20,7 @@ export default function CTA() {
       </motion.div>
 
       <div className="relative mx-auto max-w-3xl">
-        <RevealText as="h2" className="font-display text-4xl md:text-6xl leading-tight text-paper">
+        <RevealText as="h2" className="font-display text-4xl md:text-6xl lg:text-7xl leading-[1.05] text-paper">
           Have a project in mind?
           <br />
           <span className="text-subtle">Let&rsquo;s build something extraordinary.</span>

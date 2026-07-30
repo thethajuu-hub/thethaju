@@ -21,7 +21,7 @@ function Counter({ value, suffix, display }: { value: number; suffix: string; di
   }, [inView, value, display]);
 
   return (
-    <span ref={ref} className="font-display text-5xl md:text-6xl text-paper tabular-nums">
+    <span ref={ref} className="font-display font-extrabold tracking-tight text-5xl md:text-6xl text-paper tabular-nums">
       {display ?? count}
       <span className="text-subtle">{suffix}</span>
     </span>
@@ -46,7 +46,7 @@ export default function About() {
             <RevealText
               as="h2"
               delay={0.1}
-              className="mt-4 font-display text-4xl md:text-5xl text-paper leading-tight"
+              className="mt-4 font-display text-4xl md:text-6xl text-paper leading-[0.95]"
             >
               Muhammed
               <br />
@@ -78,7 +78,7 @@ export default function About() {
               {stats.map((s) => (
                 <div key={s.label}>
                   <Counter value={s.value} suffix={s.suffix} display={s.display} />
-                  <p className="mt-2 font-body text-xs tracking-widest2 text-muted uppercase">{s.label}</p>
+                  <p className="mt-2 font-body font-medium text-xs tracking-widest2 text-muted uppercase">{s.label}</p>
                 </div>
               ))}
             </div>

@@ -77,7 +77,7 @@ export default function ProjectCard({
 
       <div className="[direction:ltr]">
         <span className="font-display text-sm text-subtle">{project.index}</span>
-        <h3 className="mt-3 font-display text-3xl md:text-4xl text-paper">{project.title}</h3>
+        <h3 className="mt-3 font-display font-bold text-3xl md:text-4xl text-paper">{project.title}</h3>
         <p className="mt-3 font-body text-muted">{project.tagline}</p>
         <p className="mt-5 font-body text-sm text-muted leading-relaxed max-w-md">{project.description}</p>
 

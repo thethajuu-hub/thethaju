@@ -22,7 +22,7 @@ export default function Projects() {
         >
           Selected Work
         </motion.p>
-        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper max-w-2xl">
+        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl lg:text-7xl text-paper max-w-2xl">
           Products, not <span className="text-subtle">templates.</span>
         </RevealText>
 

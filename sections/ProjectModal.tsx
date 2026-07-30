@@ -40,7 +40,7 @@ export default function ProjectModal({
 
             <div className="border-b border-line p-8 md:p-12">
               <span className="font-display text-sm text-subtle">{project.index} &mdash; {project.year}</span>
-              <h3 className="mt-3 font-display text-4xl md:text-5xl text-paper">{project.title}</h3>
+              <h3 className="mt-3 font-display font-bold text-4xl md:text-5xl text-paper">{project.title}</h3>
               <p className="mt-3 font-body text-muted">{project.category}</p>
             </div>
 

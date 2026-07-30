@@ -40,20 +40,20 @@ export default function Contact() {
             >
               Contact
             </motion.p>
-            <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-5xl text-paper">
+            <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper">
                 Let&rsquo;s build something <span className="text-subtle">premium.</span>
               </RevealText>
 
             <div className="mt-10 space-y-6">
               <div>
-                <p className="font-body text-xs tracking-widest2 text-muted uppercase">Email</p>
-                <a href={`mailto:${social.email}`} data-cursor-hover className="mt-1 block font-display text-xl text-paper hover:text-paper transition-colors">
+                <p className="font-body font-medium text-xs tracking-widest2 text-muted uppercase">Email</p>
+                <a href={`mailto:${social.email}`} data-cursor-hover className="mt-1 block font-display font-semibold text-xl text-paper hover:text-paper transition-colors">
                   {social.email}
                 </a>
               </div>
               <div>
-                <p className="font-body text-xs tracking-widest2 text-muted uppercase">Location</p>
-                <p className="mt-1 font-display text-xl text-paper">{social.location}</p>
+                <p className="font-body font-medium text-xs tracking-widest2 text-muted uppercase">Location</p>
+                <p className="mt-1 font-display font-semibold text-xl text-paper">{social.location}</p>
               </div>
               <div className="flex gap-6 pt-2">
                 <a href={social.github} target="_blank" rel="noreferrer" data-cursor-hover className="font-body text-sm text-muted hover:text-paper transition-colors">GitHub</a>
@@ -72,7 +72,7 @@ export default function Contact() {
             className="md:col-span-7 space-y-6"
           >
             <div>
-              <label className="font-body text-xs tracking-widest2 text-muted uppercase">Name</label>
+              <label className="font-body font-medium text-xs tracking-widest2 text-muted uppercase">Name</label>
               <input
                 required
                 value={form.name}
@@ -83,7 +83,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label className="font-body text-xs tracking-widest2 text-muted uppercase">Email</label>
+              <label className="font-body font-medium text-xs tracking-widest2 text-muted uppercase">Email</label>
               <input
                 required
                 value={form.email}
@@ -94,7 +94,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label className="font-body text-xs tracking-widest2 text-muted uppercase">Message</label>
+              <label className="font-body font-medium text-xs tracking-widest2 text-muted uppercase">Message</label>
               <textarea
                 required
                 value={form.message}

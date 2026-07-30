@@ -20,7 +20,7 @@ export default function Technology() {
         >
           Stack
         </motion.p>
-        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper max-w-xl">
+        <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl lg:text-7xl text-paper max-w-xl">
           Tools of the craft.
         </RevealText>
       </div>
@@ -54,10 +54,10 @@ export default function Technology() {
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
               className="rounded-2xl border border-line bg-card p-7"
             >
-              <h3 className="font-body text-xs tracking-widest2 text-subtle uppercase">{cat.label}</h3>
+              <h3 className="font-body font-medium text-xs tracking-widest2 text-subtle uppercase">{cat.label}</h3>
               <ul className="mt-5 space-y-3">
                 {cat.items.map((item) => (
-                  <li key={item} className="font-display text-lg text-paper">
+                  <li key={item} className="font-display font-semibold text-lg text-paper">
                     {item}
                   </li>
                 ))}

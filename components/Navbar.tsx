@@ -31,7 +31,7 @@ export default function Navbar() {
               : "border border-transparent py-3"
           )}
         >
-          <a href="#home" className="font-display text-lg font-medium tracking-tight text-paper" data-cursor-hover>
+          <a href="#home" className="font-display text-lg font-bold tracking-tight text-paper" data-cursor-hover>
             THE THAJUU
           </a>
 
@@ -41,7 +41,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 data-cursor-hover
-                className="font-body text-sm text-muted hover:text-paper transition-colors duration-300"
+                className="font-body text-sm font-medium text-muted hover:text-paper transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
           <a
             href="#contact"
             data-cursor-hover
-            className="hidden md:inline-flex items-center rounded-full border border-line px-5 py-2 text-sm text-paper hover:border-white/40 hover:bg-white/5 transition-colors duration-300"
+            className="hidden md:inline-flex items-center rounded-full border border-line px-5 py-2 text-sm font-semibold text-paper hover:border-white/40 hover:bg-white/5 transition-colors duration-300"
           >
             Let&rsquo;s Talk
           </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
             className="fixed inset-0 z-[70] bg-black flex flex-col justify-between p-8"
           >
             <div className="flex justify-between items-center">
-              <span className="font-display text-lg font-medium tracking-tight text-paper">THE THAJUU</span>
+              <span className="font-display text-lg font-bold tracking-tight text-paper">THE THAJUU</span>
               <button onClick={() => setOpen(false)} aria-label="Close menu" data-cursor-hover className="text-paper text-3xl leading-none">
                 &times;
               </button>
@@ -93,7 +93,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 24 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15 + i * 0.06, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="font-display text-4xl text-paper py-3 border-b border-line"
+                  className="font-display text-4xl font-extrabold tracking-tight text-paper py-3 border-b border-line"
                 >
                   {link.label}
                 </motion.a>

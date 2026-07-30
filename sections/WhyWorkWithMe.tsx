@@ -29,7 +29,7 @@ export default function WhyWorkWithMe() {
             >
               Why work with me
             </motion.p>
-            <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-5xl text-paper">
+            <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl text-paper">
                 Built to feel <span className="text-subtle">deliberate.</span>
               </RevealText>
             <motion.p
@@ -55,7 +55,7 @@ export default function WhyWorkWithMe() {
                 className="flex items-center gap-3 bg-card px-6 py-7"
               >
                 <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white" />
-                <span className="font-body text-sm md:text-base text-paper">{reason}</span>
+                <span className="font-body font-medium text-sm md:text-base text-paper">{reason}</span>
               </motion.div>
             ))}
           </div>

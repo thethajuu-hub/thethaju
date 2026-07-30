@@ -35,7 +35,7 @@ export default function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/50" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
             </span>
-            <span className="font-body text-xs text-muted">{brand.availability}</span>
+            <span className="font-body font-medium text-xs text-muted">{brand.availability}</span>
           </motion.div>
 
           <motion.p
@@ -47,13 +47,13 @@ export default function Hero() {
             AI Web Developer &middot; Dubai, UAE
           </motion.p>
 
-          <h1 className="font-display font-medium leading-[0.95] text-paper">
-            <span className="block overflow-hidden text-[13vw] md:text-[5.5rem]">
+          <h1 className="font-display font-black tracking-tight leading-[0.92] text-paper">
+            <span className="block overflow-hidden text-[clamp(2.5rem,11vw,3.5rem)] md:text-[clamp(3.5rem,7vw,4.5rem)] lg:text-[clamp(4.5rem,6vw,6rem)]">
               <motion.span custom={0} variants={reveal} initial="hidden" animate="show" className="block">
                 THE
               </motion.span>
             </span>
-            <span className="block overflow-hidden text-[13vw] md:text-[5.5rem]">
+            <span className="block overflow-hidden text-[clamp(2.5rem,11vw,3.5rem)] md:text-[clamp(3.5rem,7vw,4.5rem)] lg:text-[clamp(4.5rem,6vw,6rem)]">
               <motion.span custom={1} variants={reveal} initial="hidden" animate="show" className="block text-subtle">
                 Thajuu
               </motion.span>
@@ -64,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 max-w-lg font-body text-base md:text-lg text-muted"
+            className="mt-10 max-w-lg font-body font-normal leading-relaxed text-base md:text-lg text-muted"
           >
             Building premium AI-powered websites with modern web technologies &mdash;
             for brands that want their site to feel as considered as their business.
@@ -74,7 +74,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-3 max-w-lg font-body text-sm text-subtle"
+            className="mt-4 max-w-lg font-body font-normal leading-relaxed text-sm text-subtle"
           >
             {brand.statement}
           </motion.p>

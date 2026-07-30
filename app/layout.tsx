@@ -6,11 +6,15 @@ import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 
 // General Sans isn't distributed on Google Fonts (Fontshare-only, would need
-// self-hosting). Manrope is the closest available match — same geometric,
-// humanist character — and is a reliable, always-available Google Font.
+// self-hosting), and Geist isn't available via next/font/google in this
+// Next.js version either (confirmed — it throws "Unknown font" at build).
+// Manrope is the closest reliable match: same geometric, humanist character,
+// and it's the only one of the three that actually loads. Weight goes up to
+// 800 (Manrope's heaviest cut — it has no true 900) to cover both the
+// "Extra Bold" section-title weight and the hero's "Black" request.
 const display = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-display",
   display: "swap",
 });
