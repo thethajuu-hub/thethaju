@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import MagneticButton from "@/components/MagneticButton";
 import { brand } from "@/lib/data";
 
-const HeroScene = dynamic(() => import("./HeroScene"), { ssr: false });
 const HeroPortrait = dynamic(() => import("./HeroPortrait"), { ssr: false });
 
 const fadeUp = {
@@ -20,10 +19,6 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-32 pb-20 md:pt-24">
-      <div className="pointer-events-none absolute inset-0 opacity-40">
-        <HeroScene />
-      </div>
-
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-12">
         <div className="md:col-span-7">
           <motion.div
