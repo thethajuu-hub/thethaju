@@ -20,7 +20,7 @@ export default function Contact() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "2b3f503a-0243-4402-992c-b508277b3768",
+          access_key: "b0a543ef-dfb9-41b5-a33f-228993d99648",
           subject: `New message from ${form.name} via thethaju.com`,
           from_name: form.name,
           email: form.email,

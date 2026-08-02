@@ -5,10 +5,6 @@ import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 
-// Sora for display (headlines) — clean, modern grotesk with a slightly
-// technical feel, good weight range for bold headline text without
-// overflow issues. Inter stays for body copy — neutral and highly
-// readable at small sizes for paragraphs and UI text.
 const display = Sora({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
