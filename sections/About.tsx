@@ -23,7 +23,7 @@ const pillars = [
 // page to create the site's alternating black/white rhythm.
 export default function About() {
   return (
-    <section id="about" className="relative bg-paper px-6 py-32 md:py-40">
+    <section id="about" className="relative bg-paper px-6 py-20 sm:py-28 md:py-40">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div className="md:col-span-4">

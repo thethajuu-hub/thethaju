@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import MagneticButton from "@/components/MagneticButton";
 import { brand } from "@/lib/data";
 
+const HeroScene = dynamic(() => import("./HeroScene"), { ssr: false });
 const HeroPortrait = dynamic(() => import("./HeroPortrait"), { ssr: false });
 
 const fadeUp = {
@@ -18,50 +19,46 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-32 pb-20 md:pt-24">
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-16 md:grid-cols-12">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28 pb-16 md:pt-24 md:pb-20">
+      <div className="pointer-events-none absolute inset-0 opacity-40">
+        <HeroScene />
+      </div>
+
+      <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 md:gap-16 md:grid-cols-12">
         <div className="md:col-span-7">
           <motion.div
             custom={0.1}
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-line bg-card/70 backdrop-blur-sm px-4 py-2"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-card/70 backdrop-blur-sm px-4 py-2"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/50" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
             </span>
             <span className="font-body font-medium text-xs text-muted">{brand.availability}</span>
-            <span className="h-3 w-px bg-line" />
-            <span className="font-body text-xs text-subtle">Dubai, UAE</span>
           </motion.div>
 
-          {/* Headline: name pill on line 1, role pill on its own line 2,
-              then flowing tagline text — mirrors the reference layout */}
-          <motion.h1
-            custom={0.25}
+          <motion.p
+            custom={0.2}
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="font-display font-black tracking-normal leading-[1.2] text-paper text-[clamp(1.4rem,3.8vw,2.25rem)]"
+            className="font-body font-medium text-sm text-subtle"
           >
-            <span className="block">
-             Hi! I&rsquo;m{" "}
-              <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
-                {brand.personalName}
-              </span>
-            </span>
+            {brand.personalName} &middot; {brand.role}
+          </motion.p>
 
-           <span className="mt-6 block">
-              <span className="inline-flex items-center rounded-full border border-line px-4 py-1 align-middle text-subtle">
-                {brand.role}
-              </span>
-            </span>
-
-            <span className="mt-4 block">
-              crafting premium websites for modern brands.
-            </span>
+          {/* One plain, confident headline — no inline pills or extra chunks */}
+          <motion.h1
+            custom={0.3}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="mt-4 font-display font-black leading-[1.05] text-paper text-[clamp(2rem,5.5vw,3.5rem)]"
+          >
+            Premium websites for modern businesses.
           </motion.h1>
 
           <motion.p
@@ -69,7 +66,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mt-8 max-w-lg font-body font-normal leading-relaxed text-base md:text-lg text-muted"
+            className="mt-6 max-w-md font-body font-normal leading-relaxed text-base text-muted"
           >
             {brand.statement}
           </motion.p>
@@ -81,8 +78,11 @@ export default function Hero() {
             animate="show"
             className="mt-10 flex flex-wrap items-center gap-5"
           >
-           <MagneticButton href="#projects" variant="outline" showArrow>
-              Projects
+            <MagneticButton href="#projects" variant="solid">
+              View Work
+            </MagneticButton>
+            <MagneticButton href="#connect" variant="outline">
+              Let&rsquo;s Connect
             </MagneticButton>
           </motion.div>
         </div>

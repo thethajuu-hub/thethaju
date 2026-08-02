@@ -15,7 +15,9 @@
   * {
     cursor: auto;
   }
-  .custom-cursor {
+  .custom-cursor,
+  .custom-cursor-ring,
+  .custom-cursor-text {
     display: none !important;
   }
 }

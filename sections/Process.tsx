@@ -15,7 +15,7 @@ export default function Process() {
   const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section id="process" className="relative bg-paper px-6 pt-32 pb-20 md:pt-40">
+    <section id="process" className="relative bg-paper px-6 pt-20 sm:pt-28 md:pt-40 pb-12 md:pb-20">
       <div className="mx-auto max-w-4xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

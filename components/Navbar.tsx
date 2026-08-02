@@ -59,7 +59,7 @@ export default function Navbar() {
           <button
             onClick={() => setOpen(true)}
             data-cursor-hover
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden flex h-11 w-11 flex-col items-center justify-center gap-1.5"
             aria-label="Open menu"
           >
             <span className="block h-px w-6 bg-paper" />
@@ -79,9 +79,7 @@ export default function Navbar() {
           >
             <div className="flex justify-between items-center">
               <span className="font-display text-lg font-bold tracking-normal text-paper">THE THAJU</span>
-              <button onClick={() => setOpen(false)} aria-label="Close menu" data-cursor-hover className="text-paper text-3xl leading-none">
-                &times;
-              </button>
+              <button onClick={() => setOpen(false)} aria-label="Close menu" data-cursor-hover className="flex h-11 w-11 items-center justify-center text-paper text-3xl leading-none">&times;</button>
             </div>
 
             <nav className="flex flex-col gap-2">

@@ -93,7 +93,7 @@ export default function CustomCursor() {
       <div ref={ringRef} className="custom-cursor-ring" />
       <span
         ref={textRef}
-        className="pointer-events-none fixed left-0 top-0 z-[9999] -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap font-body text-xs font-semibold uppercase tracking-widest2 text-paper opacity-0 transition-opacity duration-200 [mix-blend-mode:difference]"
+        className="custom-cursor-text pointer-events-none fixed left-0 top-0 z-[9999] -translate-x-1/2 -translate-y-1/2 select-none whitespace-nowrap font-body text-xs font-semibold uppercase tracking-widest2 text-paper opacity-0 transition-opacity duration-200 [mix-blend-mode:difference]"
       />
     </>
   );

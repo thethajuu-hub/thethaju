@@ -11,7 +11,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative bg-paper px-6 pt-16 pb-32 md:pb-40">
+    <section id="faq" className="relative bg-paper px-6 pt-10 pb-20 sm:pb-28 md:pb-40">
       <div className="mx-auto max-w-3xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
