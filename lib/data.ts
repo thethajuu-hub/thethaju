@@ -156,9 +156,9 @@ export const social = {
 export const brand = {
   name: "THE THAJU",
   personalName: "Thajudheen",
-  role: "Digital Experience Designer & Developer",
+  role: "Digital Designer & Developer",
   availability: "Available For Freelance Projects",
-  statement: "I help startups, businesses, and founders build fast, scalable, and visually impressive websites using AI-assisted workflows and modern technologies.",
+  statement: "I build fast, scalable websites for startups and founders using AI-assisted workflows.",
 };
 
 // Answers are drafted, professional starting copy — review and adjust the

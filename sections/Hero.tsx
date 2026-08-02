@@ -42,8 +42,8 @@ export default function Hero() {
             <span className="font-body text-xs text-subtle">Dubai, UAE</span>
           </motion.div>
 
-          {/* Single flowing headline — name and role as inline pills, reads as
-              one sentence instead of five stacked blocks of text */}
+          {/* Headline: name pill on line 1, role pill on its own line 2,
+              then flowing tagline text — mirrors the reference layout */}
           <motion.h1
             custom={0.25}
             variants={fadeUp}
@@ -51,15 +51,22 @@ export default function Hero() {
             animate="show"
             className="font-display font-black tracking-normal leading-[1.2] text-paper text-[clamp(1.4rem,3.8vw,2.25rem)]"
           >
-            Hi, I&rsquo;m{" "}
-            <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
-              {brand.personalName}
-            </span>{" "}
-            &mdash;{" "}
-            <span className="inline-flex items-center rounded-full border border-line px-4 py-1 align-middle text-subtle">
-              {brand.role}
-            </span>{" "}
-            creating premium websites for modern businesses.
+            <span className="block">
+             Hi! I&rsquo;m{" "}
+              <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
+                {brand.personalName}
+              </span>
+            </span>
+
+           <span className="mt-6 block">
+              <span className="inline-flex items-center rounded-full border border-line px-4 py-1 align-middle text-subtle">
+                {brand.role}
+              </span>
+            </span>
+
+            <span className="mt-4 block">
+              crafting premium websites for modern brands.
+            </span>
           </motion.h1>
 
           <motion.p
@@ -79,11 +86,8 @@ export default function Hero() {
             animate="show"
             className="mt-10 flex flex-wrap items-center gap-5"
           >
-            <MagneticButton href="#projects" variant="solid">
-              View Work
-            </MagneticButton>
-            <MagneticButton href="#connect" variant="outline">
-              Let&rsquo;s Connect
+           <MagneticButton href="#projects" variant="outline" showArrow>
+              Projects
             </MagneticButton>
           </motion.div>
         </div>
