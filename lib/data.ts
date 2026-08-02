@@ -75,9 +75,9 @@ export const services: Service[] = [
   { title: "Premium Business Websites", description: "Corporate sites built to signal credibility from the first scroll." },
   { title: "Landing Pages", description: "Single-purpose pages engineered around one conversion goal." },
   { title: "Ecommerce Websites", description: "Storefronts where the product stays the hero, not the UI." },
-  { title: "AI Integration", description: "AI-assisted workflows and features layered in where they genuinely help — not for their own sake." },
-  { title: "Frontend Development", description: "Clean, component-first builds in React and Next.js that are easy to maintain and extend." },
-  { title: "Performance Optimization", description: "Faster loads, cleaner code, better Core Web Vitals — measured, not assumed." },
+  { title: "AI Integration", description: "AI-assisted workflows and features layered in where they genuinely help." },
+  { title: "Frontend Development", description: "Clean, component-first builds in React and Next.js." },
+  { title: "Performance Optimization", description: "Faster loads, cleaner code, better Core Web Vitals." },
 ];
 
 export interface TechCategory {
@@ -106,27 +106,27 @@ export const processIntro = {
 export const processSteps: ProcessStep[] = [
   {
     index: "01",
-    title: "Discovery & Strategy",
+    title: "Discovery",
     description: "Before a single pixel moves, I get inside the business — goals, audience, competitors, constraints. The strategy is the foundation everything else stands on.",
   },
   {
     index: "02",
-    title: "Experience Design",
+    title: "Design",
     description: "Layouts, flows, and interfaces take shape here — not decoration, but decisions. Every screen earns its place before it's allowed to exist.",
   },
   {
     index: "03",
-    title: "AI-Assisted Development",
+    title: "AI-Powered Development",
     description: "Design becomes a living product — scalable, responsive, built to last. AI clears the repetitive work so precision goes where it matters most.",
   },
   {
     index: "04",
-    title: "Optimization & Quality",
+    title: "Testing",
     description: "Every interaction gets refined, every device gets checked, every millisecond gets questioned. This is where good becomes exceptional.",
   },
   {
     index: "05",
-    title: "Launch & Growth",
+    title: "Launch",
     description: "The site ships polished and production-ready — with a technical foundation built to keep growing long after launch day.",
   },
 ];
@@ -155,39 +155,42 @@ export const social = {
 
 export const brand = {
   name: "THE THAJU",
-  personalName: "Mhd Thaju",
-  role: "AI Web Developer & Digital Experience Builder",
+  personalName: "Thajudheen",
+  role: "Digital Experience Designer & Developer",
   availability: "Available For Freelance Projects",
   statement: "I help startups, businesses, and founders build fast, scalable, and visually impressive websites using AI-assisted workflows and modern technologies.",
 };
 
-// FAQ answers below are drafted, professional starting copy — review and
-// adjust the specifics (timelines, redesign scope, support terms) to match
-// how you actually work before publishing.
+// Answers are drafted, professional starting copy — review and adjust the
+// specifics (redesign scope, ecommerce approach, engagement process) to
+// match how you actually work before publishing.
 export const faq = [
   {
-    q: "How does the project process work?",
-    a: "Every project starts with discovery and strategy, moves through design and AI-assisted development, then optimization and launch — the same five-step process outlined above, tailored to the scope of your project.",
-  },
-  {
-    q: "How long does a project usually take?",
-    a: "Timelines vary with scope — a focused landing page moves faster than a full business or ecommerce build. I'll give you a clear estimate after our first discovery conversation.",
+    q: "What services do you provide?",
+    a: "Premium business websites, landing pages, ecommerce builds, and AI-integrated web experiences — end-to-end, from strategy through launch.",
   },
   {
     q: "Can you redesign an existing website?",
-    a: "Yes. Redesigns start with an audit of what's working and what isn't, so the rebuild improves on a real foundation rather than starting from a blank page.",
+    a: "Yes. Redesigns start with an audit of what's working and what isn't, so the rebuild improves on a real foundation rather than starting blank.",
   },
   {
-    q: "Do you provide support after launch?",
-    a: "Yes — I stay available after launch for fixes, updates, and iteration as your site and business evolve.",
+    q: "Do you build ecommerce websites?",
+    a: "Yes — storefronts built around usability and conversion, with the product kept as the hero rather than the interface around it.",
+  },
+  {
+    q: "How do we start working together?",
+    a: "Reach out through the contact form or email below with a short brief. I'll follow up with questions and a clear next step.",
+  },
+  {
+    q: "What technologies do you use?",
+    a: "Next.js, TypeScript, and Tailwind CSS at the core, with Framer Motion, GSAP, and Three.js layered in for motion and 3D where it earns its place.",
   },
 ];
 
 export const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Selected Work", href: "#work" },
   { label: "About", href: "#about" },
-  { label: "What I Do", href: "#what-i-do" },
-  { label: "Process", href: "#process" },
+  { label: "Projects", href: "#projects" },
+  { label: "FAQ", href: "#faq" },
   { label: "Let's Connect", href: "#connect" },
 ];

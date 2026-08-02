@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 
-// General Sans and Geist both require self-hosting or aren't available via
-// next/font/google in this Next.js version (Geist throws "Unknown font" at
-// build — confirmed). Bricolage Grotesque is the swap: it has real character
-// — a slightly condensed, editorial display quality — instead of Manrope's
-// safer, more neutral geometry, while still being a reliable Google Font
-// that loads without the crash risk. Weight goes up to 800, its heaviest cut.
-const display = Bricolage_Grotesque({
+// Geist still isn't available via next/font/google in this Next.js version
+// (confirmed crash), and Satoshi is Fontshare-only (needs self-hosting) —
+// same limitation as General Sans before it. Using Inter for both display
+// and body this time, differentiated by weight: it's genuinely the closest
+// honest match to Geist's look and behavior (same neutral, modern grotesk
+// lineage — Vercel's own product uses both interchangeably in places), and
+// critically, it's narrow enough not to overflow the way Unbounded did.
+const display = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "600", "700", "800", "900"],
   variable: "--font-display",
   display: "swap",
 });

@@ -1,17 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import RevealText from "@/components/RevealText";
-import { projects, Project } from "@/lib/data";
+import { projects } from "@/lib/data";
 import ProjectCard from "./ProjectCard";
-import ProjectModal from "./ProjectModal";
 
 export default function Projects() {
-  const [active, setActive] = useState<Project | null>(null);
-
   return (
-    <section id="work" className="relative px-6 py-32 md:py-40">
+    <section id="projects" className="relative px-6 py-32 md:py-40 border-t border-line">
       <div className="mx-auto max-w-6xl">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -20,20 +16,18 @@ export default function Projects() {
           transition={{ duration: 0.7 }}
           className="section-eyebrow"
         >
-          Selected Work
+          Projects
         </motion.p>
         <RevealText as="h2" delay={0.1} className="mt-4 font-display text-4xl md:text-6xl lg:text-7xl text-paper max-w-2xl">
-          Products, not <span className="text-subtle">templates.</span>
+          Selected work.
         </RevealText>
 
-        <div className="mt-24 space-y-28 md:space-y-40">
-          {projects.map((project, i) => (
-            <ProjectCard key={project.id} project={project} onOpen={() => setActive(project)} reversed={i % 2 === 1} />
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
-
-      <ProjectModal project={active} onClose={() => setActive(null)} />
     </section>
   );
 }

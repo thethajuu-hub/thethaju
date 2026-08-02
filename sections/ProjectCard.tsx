@@ -1,27 +1,19 @@
 "use client";
 
 import { MouseEvent } from "react";
+import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Project } from "@/lib/data";
-import { cn } from "@/lib/utils";
 
-export default function ProjectCard({
-  project,
-  onOpen,
-  reversed,
-}: {
-  project: Project;
-  onOpen: () => void;
-  reversed?: boolean;
-}) {
+export default function ProjectCard({ project }: { project: Project }) {
   const mx = useMotionValue(0);
   const my = useMotionValue(0);
   const springX = useSpring(mx, { stiffness: 150, damping: 18, mass: 0.5 });
   const springY = useSpring(my, { stiffness: 150, damping: 18, mass: 0.5 });
-  const rotateX = useTransform(springY, [-0.5, 0.5], [5, -5]);
-  const rotateY = useTransform(springX, [-0.5, 0.5], [-5, 5]);
+  const rotateX = useTransform(springY, [-0.5, 0.5], [4, -4]);
+  const rotateY = useTransform(springX, [-0.5, 0.5], [-4, 4]);
 
-  const handleTilt = (e: MouseEvent<HTMLButtonElement>) => {
+  const handleTilt = (e: MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     mx.set((e.clientX - rect.left) / rect.width - 0.5);
     my.set((e.clientY - rect.top) / rect.height - 0.5);
@@ -34,86 +26,40 @@ export default function ProjectCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-      className={cn(
-        "grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center",
-        reversed && "md:[direction:rtl]"
-      )}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
     >
-      <motion.button
-        onClick={onOpen}
-        onMouseMove={handleTilt}
-        onMouseLeave={resetTilt}
-        data-cursor-hover
-        data-cursor-text="View Project"
-        style={{ rotateX, rotateY, transformPerspective: 1000 }}
-        whileHover={{ boxShadow: "0 30px 80px -20px rgba(255,255,255,0.12)" }}
-        className="group relative w-full [direction:ltr] rounded-2xl border border-line bg-card p-3 text-left overflow-hidden"
-      >
-        <div className={cn("absolute inset-0 bg-gradient-to-br opacity-60", project.coverGradient)} />
-        <div className="relative rounded-xl border border-line overflow-hidden bg-black">
-          <div className="flex items-center gap-1.5 border-b border-line bg-[#0d0d0d] px-3 py-2">
-            <span className="h-2 w-2 rounded-full bg-[#333]" />
-            <span className="h-2 w-2 rounded-full bg-[#333]" />
-            <span className="h-2 w-2 rounded-full bg-[#333]" />
-          </div>
-          <div className="relative h-64 md:h-80 w-full overflow-hidden">
+      <Link href={`/projects/${project.id}`} data-cursor-hover data-cursor-text="View Project" className="group block">
+        <motion.div
+          onMouseMove={handleTilt}
+          onMouseLeave={resetTilt}
+          style={{ rotateX, rotateY, transformPerspective: 1000 }}
+          className="relative overflow-hidden rounded-2xl border border-line bg-card"
+        >
+          <div className="relative h-72 md:h-[26rem] w-full overflow-hidden bg-black">
             <iframe
               src={project.url}
               title={project.title}
               loading="lazy"
-              className="pointer-events-none absolute left-0 top-0 h-[200%] w-[200%] origin-top-left scale-50 border-0 transition-transform duration-700 ease-premium group-hover:scale-[0.52]"
+              tabIndex={-1}
+              className="pointer-events-none absolute left-0 top-0 h-[220%] w-[220%] origin-top-left scale-[0.455] border-0 transition-transform duration-700 ease-premium group-hover:scale-[0.48]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           </div>
-        </div>
-        <div className="relative mt-4 flex items-center justify-between px-1 pb-1">
-          <span className="font-body text-xs tracking-widest2 text-muted">VIEW PROJECT</span>
-          <span className="font-body text-xs text-subtle transition-transform duration-500 group-hover:translate-x-1">&rarr;</span>
-        </div>
-      </motion.button>
+        </motion.div>
 
-      <div className="[direction:ltr]">
-        <div className="flex items-center gap-3">
-          <span className="font-display text-sm text-subtle">{project.index}</span>
-          <span className="rounded-full border border-line px-3 py-1 font-body font-medium text-xs text-muted">
-            {project.category}
+        <div className="mt-5 flex items-start justify-between gap-4">
+          <div>
+            <h3 className="font-display font-semibold text-2xl text-paper">{project.title}</h3>
+            <p className="mt-1 font-body text-xs tracking-widest2 uppercase text-subtle">{project.category}</p>
+          </div>
+          <span className="mt-1 inline-flex shrink-0 items-center gap-2 font-body text-sm text-muted transition-colors duration-300 group-hover:text-paper">
+            View Project <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
           </span>
         </div>
-        <h3 className="mt-3 font-display font-bold text-3xl md:text-4xl text-paper">{project.title}</h3>
-        <p className="mt-3 font-body text-muted">{project.tagline}</p>
-        <p className="mt-5 font-body text-sm text-muted leading-relaxed max-w-md">{project.description}</p>
-
-        <div className="mt-6 flex flex-wrap gap-2">
-          {project.technologies.slice(0, 4).map((t) => (
-            <span key={t} className="rounded-full border border-line px-3 py-1 font-body text-xs text-muted">
-              {t}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-8 flex flex-wrap items-center gap-6">
-          <button
-            onClick={onOpen}
-            data-cursor-hover
-            className="inline-flex items-center gap-2 border-b border-white/40 pb-1 font-body text-sm text-paper"
-          >
-            View Case Study <span>&rarr;</span>
-          </button>
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noreferrer"
-            data-cursor-hover
-            className="inline-flex items-center gap-2 font-body text-sm text-subtle hover:text-paper transition-colors"
-          >
-            View Live <span>&rarr;</span>
-          </a>
-        </div>
-      </div>
+      </Link>
     </motion.div>
   );
 }

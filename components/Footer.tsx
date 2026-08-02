@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
           <div>
-            <p className="font-display text-2xl font-bold tracking-tight text-paper">THE THAJU</p>
+            <p className="font-display text-2xl font-bold tracking-normal text-paper">THE THAJU</p>
             <p className="mt-2 font-body text-sm text-muted">AI Web Developer &mdash; Dubai, UAE</p>
           </div>
 

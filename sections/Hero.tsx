@@ -49,17 +49,17 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1.5rem,4.2vw,2.5rem)]"
+            className="font-display font-black tracking-normal leading-[1.2] text-paper text-[clamp(1.4rem,3.8vw,2.25rem)]"
           >
             Hi, I&rsquo;m{" "}
             <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
               {brand.personalName}
             </span>{" "}
-            &mdash; an{" "}
+            &mdash;{" "}
             <span className="inline-flex items-center rounded-full border border-line px-4 py-1 align-middle text-subtle">
-              AI Web Developer
+              {brand.role}
             </span>{" "}
-            building premium digital experiences for modern brands.
+            creating premium websites for modern businesses.
           </motion.h1>
 
           <motion.p
@@ -79,7 +79,7 @@ export default function Hero() {
             animate="show"
             className="mt-10 flex flex-wrap items-center gap-5"
           >
-            <MagneticButton href="#work" variant="solid">
+            <MagneticButton href="#projects" variant="solid">
               View Work
             </MagneticButton>
             <MagneticButton href="#connect" variant="outline">

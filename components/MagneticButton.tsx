@@ -10,6 +10,8 @@ interface MagneticButtonProps {
   onClick?: () => void;
   variant?: "solid" | "outline";
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 export default function MagneticButton({
@@ -18,6 +20,8 @@ export default function MagneticButton({
   onClick,
   variant = "solid",
   className,
+  target,
+  rel,
 }: MagneticButtonProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState({ x: 0, y: 0 });
@@ -48,6 +52,8 @@ export default function MagneticButton({
       <Tag
         href={href}
         onClick={onClick}
+        target={target}
+        rel={rel}
         className={clsx(
           "inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold tracking-wide font-body transition-colors duration-500 ease-premium rounded-full border",
           variant === "solid"
