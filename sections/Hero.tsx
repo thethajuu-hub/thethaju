@@ -79,9 +79,9 @@ export default function Hero() {
             animate="show"
             className="mt-10"
           >
-            <MagneticButton href="#projects" variant="solid">
+            <MagneticButton href="#projects" variant="outline" className="px-6 py-3">
               Projects
-              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-ink/20 transition-transform duration-300 ease-premium group-hover:-rotate-45">
+              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-paper/25 transition-transform duration-300 ease-premium group-hover:-rotate-45">
                 ↗
               </span>
             </MagneticButton>
