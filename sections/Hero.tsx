@@ -31,33 +31,34 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-line bg-card/70 backdrop-blur-sm px-4 py-2"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-line bg-card/70 backdrop-blur-sm px-4 py-2"
           >
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/50" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-white" />
             </span>
             <span className="font-body font-medium text-xs text-muted">{brand.availability}</span>
+            <span className="h-3 w-px bg-line" />
+            <span className="font-body text-xs text-subtle">Dubai, UAE</span>
           </motion.div>
 
-          <motion.p
-            custom={0.2}
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            className="font-body font-medium text-sm text-subtle"
-          >
-            {brand.personalName} &middot; {brand.role}
-          </motion.p>
-
-          {/* One plain, confident headline — no inline pills or extra chunks */}
+          {/* Pill headline — name and role as inline badges, per the live version */}
           <motion.h1
-            custom={0.3}
+            custom={0.25}
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mt-4 font-display font-black leading-[1.05] text-paper text-[clamp(2rem,5.5vw,3.5rem)]"
+            className="font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1.5rem,3.2vw,2.25rem)]"
           >
+            Hi! I&rsquo;m{" "}
+            <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
+              Thajudheen
+            </span>
+            <br />
+            <span className="inline-flex items-center rounded-full border border-line px-4 py-1 mt-2 align-middle text-subtle">
+              Digital Designer &amp; Developer
+            </span>
+            <br />
             Premium websites for modern businesses.
           </motion.h1>
 
@@ -76,13 +77,13 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mt-10 flex flex-wrap items-center gap-5"
+            className="mt-10"
           >
             <MagneticButton href="#projects" variant="solid">
-              View Work
-            </MagneticButton>
-            <MagneticButton href="#connect" variant="outline">
-              Let&rsquo;s Connect
+              Projects
+              <span className="flex h-6 w-6 items-center justify-center rounded-full border border-ink/20 transition-transform duration-300 ease-premium group-hover:-rotate-45">
+                ↗
+              </span>
             </MagneticButton>
           </motion.div>
         </div>

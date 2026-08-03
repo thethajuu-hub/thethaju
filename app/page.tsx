@@ -1,4 +1,3 @@
-import LoadingScreen from "@/components/LoadingScreen";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/sections/Hero";
@@ -16,7 +15,6 @@ import Contact from "@/sections/Contact";
 export default function Home() {
   return (
     <>
-      <LoadingScreen />
       <Navbar />
       <main className="relative z-10">
         <Hero />

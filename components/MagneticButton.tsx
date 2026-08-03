@@ -55,7 +55,7 @@ export default function MagneticButton({
         target={target}
         rel={rel}
         className={clsx(
-          "inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold tracking-wide font-body transition-colors duration-500 ease-premium rounded-full border",
+          "group inline-flex items-center gap-3 px-8 py-4 text-sm font-semibold tracking-wide font-body transition-colors duration-500 ease-premium rounded-full border",
           variant === "solid"
             ? "bg-paper text-ink border-paper hover:bg-transparent hover:text-paper"
             : "bg-transparent text-paper border-line hover:border-white/40 hover:bg-white/5",
