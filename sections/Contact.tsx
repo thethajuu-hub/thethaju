@@ -16,11 +16,25 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
     try {
-      // Wire this up to /api/contact (or a form service such as Formspree)
-      // once a backend endpoint is ready. For now this simulates a send.
-      await new Promise((resolve) => setTimeout(resolve, 900));
-      setStatus("sent");
-      setForm({ name: "", email: "", message: "" });
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "b0a543ef-dfb9-41b5-a33f-228993d99648",
+          subject: `New message from ${form.name} via thethaju.vercel.app`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("sent");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
