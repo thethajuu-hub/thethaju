@@ -64,6 +64,31 @@ export const projects: Project[] = [
     ],
     coverGradient: "from-[#12100A] via-[#0A0A0A] to-black",
   },
+  {
+    id: "al-baraa",
+    index: "03",
+    title: "Al Baraa Al Aliyah",
+    tagline: "A trust-first corporate site for a PRO services company",
+    description:
+      "A production-ready corporate website for a Dubai-based documents clearing and PRO services company — covering company formation, visa services, VAT registration, and government documentation. Built to read as established and trustworthy from the first scroll, with a full services breakdown and a working contact pipeline for client inquiries.",
+    url: "https://albaraaalaliyah.vercel.app/",
+    year: "2026",
+    category: "Corporate / PRO Services Website",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+    features: [
+      "Full breakdown of 10+ government and business services",
+      "Trust-building sections with client testimonials and stats",
+      "Contact form routed directly to the business inbox",
+      "SEO-optimized, mobile-first corporate layout",
+    ],
+    process: [
+      "Translated a services-heavy business into a clear, scannable sitemap",
+      "Prioritized credibility signals for a trust-sensitive PRO services audience",
+      "Built entirely in Next.js and Tailwind for a fast, maintainable site",
+      "Wired up a real contact pipeline so inquiries reach the business directly",
+    ],
+    coverGradient: "from-[#0f1210] via-[#0A0A0A] to-black",
+  },
 ];
 
 export interface Service {

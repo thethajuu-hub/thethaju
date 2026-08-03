@@ -4,6 +4,7 @@ import { MouseEvent } from "react";
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Project } from "@/lib/data";
+import DeviceMockup from "@/components/DeviceMockup";
 
 export default function ProjectCard({ project }: { project: Project }) {
   const mx = useMotionValue(0);
@@ -36,18 +37,9 @@ export default function ProjectCard({ project }: { project: Project }) {
           onMouseMove={handleTilt}
           onMouseLeave={resetTilt}
           style={{ rotateX, rotateY, transformPerspective: 1000 }}
-          className="relative overflow-hidden rounded-2xl border border-line bg-card"
+          className="relative rounded-2xl border border-line bg-card p-6 pb-10 transition-colors duration-500 group-hover:border-white/20"
         >
-          <div className="relative h-72 md:h-[26rem] w-full overflow-hidden bg-black">
-            <iframe
-              src={project.url}
-              title={project.title}
-              loading="lazy"
-              tabIndex={-1}
-              className="pointer-events-none absolute left-0 top-0 h-[220%] w-[220%] origin-top-left scale-[0.455] border-0 transition-transform duration-700 ease-premium group-hover:scale-[0.48]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-          </div>
+          <DeviceMockup url={project.url} title={project.title} />
         </motion.div>
 
         <div className="mt-5 flex items-start justify-between gap-4">

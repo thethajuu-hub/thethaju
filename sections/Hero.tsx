@@ -37,40 +37,37 @@ export default function Hero() {
             <span className="font-body text-xs text-subtle">Dubai, UAE</span>
           </motion.div>
 
-          {/* Small intro line — kept light so it doesn't compete with the headline */}
-          <motion.p
-            custom={0.2}
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            className="font-display font-medium tracking-tight leading-snug text-paper/90 text-[clamp(1.05rem,1.6vw,1.375rem)] flex flex-wrap items-center gap-2"
-          >
-            Hi! I&rsquo;m{" "}
-            <span className="inline-flex items-center rounded-full bg-white text-ink px-3.5 py-1 align-middle text-[0.95em] font-semibold">
-              Thajudheen
-            </span>
-          </motion.p>
+          {/* Pill headline — name and role as inline badges, per the live version */}
+<motion.div
+  custom={0.25}
+  variants={fadeUp}
+  initial="hidden"
+  animate="show"
+>
+  <div className="font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1rem,1.6vw,1.25rem)] flex flex-wrap items-center gap-x-2">
+    Hi! I&rsquo;m{" "}
+    <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
+      Thajudheen
+    </span>
+  </div>
 
-          {/* Headline — the dominant, large, bold statement */}
-          <motion.h1
-            custom={0.35}
-            variants={fadeUp}
-            initial="hidden"
-            animate="show"
-            className="mt-4 font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1.875rem,4.4vw,3.25rem)]"
-          >
-            <span className="block mb-3 w-fit rounded-full border border-line bg-card/80 backdrop-blur-sm px-5 py-2 align-middle font-body font-semibold tracking-normal text-muted text-[clamp(1.125rem,2.4vw,1.75rem)]">
-              Digital Designer &amp; Developer
-            </span>
-            Premium websites for modern businesses.
-          </motion.h1>
+  <div className="mt-3">
+    <span className="inline-flex items-center rounded-full border border-line px-4 py-1 align-middle text-subtle font-display font-black text-[clamp(1rem,1.6vw,1.25rem)]">
+      Digital Designer &amp; Developer
+    </span>
+  </div>
+
+  <h1 className="mt-3 font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1.75rem,4vw,3rem)]">
+    Premium websites for modern businesses.
+  </h1>
+</motion.div>
 
           <motion.p
             custom={0.5}
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mt-6 max-w-md font-body font-normal leading-relaxed text-sm text-muted"
+            className="mt-6 max-w-md font-body font-normal leading-relaxed text-base text-muted"
           >
             {brand.statement}
           </motion.p>
@@ -83,13 +80,13 @@ export default function Hero() {
             className="mt-10"
           >
             <MagneticButton href="#projects" variant="outline" className="px-6 py-3">
-              Projects
-              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-paper/25 transition-transform duration-300 ease-premium group-hover:rotate-45">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M7 17L17 7M7 7h10v10" />
-                </svg>
-              </span>
-            </MagneticButton>
+  Projects
+  <span className="flex h-5 w-5 items-center justify-center rounded-full border border-paper/25 overflow-hidden">
+    <span className="inline-block transition-transform duration-300 ease-premium -rotate-45 group-hover:rotate-0">
+      →
+    </span>
+  </span>
+</MagneticButton>
           </motion.div>
         </div>
 

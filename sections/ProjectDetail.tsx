@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MagneticButton from "@/components/MagneticButton";
+import DeviceMockup from "@/components/DeviceMockup";
 import { Project } from "@/lib/data";
 
 // The hero image and gallery below use scaled-down live iframes of the
@@ -66,9 +67,9 @@ export default function ProjectDetail({
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-12"
+            className="mt-12 rounded-2xl border border-line bg-card p-8 pb-14 md:p-12 md:pb-20"
           >
-            <LivePreview url={project.url} title={project.title} scale={0.42} height="h-[22rem] md:h-[34rem]" />
+            <DeviceMockup url={project.url} title={project.title} className="max-w-2xl mx-auto" />
           </motion.div>
 
           {/* Overview */}
