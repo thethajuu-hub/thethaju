@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import MagneticButton from "@/components/MagneticButton";
 import { brand } from "@/lib/data";
 
-const HeroScene = dynamic(() => import("./HeroScene"), { ssr: false });
 const HeroPortrait = dynamic(() => import("./HeroPortrait"), { ssr: false });
 
 const fadeUp = {
@@ -20,10 +19,6 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden px-6 pt-28 pb-16 md:pt-24 md:pb-20">
-      <div className="pointer-events-none absolute inset-0 opacity-40">
-        <HeroScene />
-      </div>
-
       <div className="relative z-10 mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 md:gap-16 md:grid-cols-12">
         <div className="md:col-span-7">
           <motion.div
@@ -42,23 +37,31 @@ export default function Hero() {
             <span className="font-body text-xs text-subtle">Dubai, UAE</span>
           </motion.div>
 
-          {/* Pill headline — name and role as inline badges, per the live version */}
-          <motion.h1
-            custom={0.25}
+          {/* Small intro line — kept light so it doesn't compete with the headline */}
+          <motion.p
+            custom={0.2}
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1.5rem,3.2vw,2.25rem)]"
+            className="font-display font-medium tracking-tight leading-snug text-paper/90 text-[clamp(1.05rem,1.6vw,1.375rem)] flex flex-wrap items-center gap-2"
           >
             Hi! I&rsquo;m{" "}
-            <span className="inline-flex items-center rounded-full bg-white text-ink px-4 py-1 align-middle">
+            <span className="inline-flex items-center rounded-full bg-white text-ink px-3.5 py-1 align-middle text-[0.95em] font-semibold">
               Thajudheen
             </span>
-            <br />
-            <span className="inline-flex items-center rounded-full border border-line px-4 py-1 mt-2 align-middle text-subtle">
+          </motion.p>
+
+          {/* Headline — the dominant, large, bold statement */}
+          <motion.h1
+            custom={0.35}
+            variants={fadeUp}
+            initial="hidden"
+            animate="show"
+            className="mt-4 font-display font-black tracking-tight leading-[1.15] text-paper text-[clamp(1.875rem,4.4vw,3.25rem)]"
+          >
+            <span className="block mb-3 w-fit rounded-full border border-line bg-card/80 backdrop-blur-sm px-5 py-2 align-middle font-body font-semibold tracking-normal text-muted text-[clamp(1.125rem,2.4vw,1.75rem)]">
               Digital Designer &amp; Developer
             </span>
-            <br />
             Premium websites for modern businesses.
           </motion.h1>
 
@@ -67,7 +70,7 @@ export default function Hero() {
             variants={fadeUp}
             initial="hidden"
             animate="show"
-            className="mt-6 max-w-md font-body font-normal leading-relaxed text-base text-muted"
+            className="mt-6 max-w-md font-body font-normal leading-relaxed text-sm text-muted"
           >
             {brand.statement}
           </motion.p>
@@ -81,8 +84,10 @@ export default function Hero() {
           >
             <MagneticButton href="#projects" variant="outline" className="px-6 py-3">
               Projects
-              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-paper/25 transition-transform duration-300 ease-premium group-hover:-rotate-45">
-                ↗
+              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-paper/25 transition-transform duration-300 ease-premium group-hover:rotate-45">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M7 17L17 7M7 7h10v10" />
+                </svg>
               </span>
             </MagneticButton>
           </motion.div>
