@@ -18,9 +18,6 @@ export default function Footer() {
             <a href={social.github} target="_blank" rel="noreferrer" data-cursor-hover className="hover:text-paper transition-colors">
               GitHub
             </a>
-            <a href={social.instagram} target="_blank" rel="noreferrer" data-cursor-hover className="hover:text-paper transition-colors">
-              Instagram
-            </a>
             <a href={social.x} target="_blank" rel="noreferrer" data-cursor-hover className="hover:text-paper transition-colors">
               X
             </a>
